@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="index.js"></script>
+        <title>Drum Kit</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="key-container">
+                    <div class="key" data-key="65">
+                        <kbd class="key__alphabet">A</kbd>
+                        <span class="key__name">Clap</span>
+                    </div>
+                    <div class="key" data-key="83">
+                        <kbd class="key__alphabet">S</kbd>
+                        <span class="key__name">Hithat</span>
+                    </div>
+                    <div class="key" data-key="68">
+                        <kbd class="key__alphabet">D</kbd>
+                        <span class="key__name">Kick</span>
+                    </div>
+                    <div class="key" data-key="70">
+                        <kbd class="key__alphabet">F</kbd>
+                        <span class="key__name">Openhat</span>
+                    </div>
+                    <div class="key" data-key="71">
+                        <kbd class="key__alphabet">G</kbd>
+                        <span class="key__name">Boom</span>
+                    </div>
+                    <div class="key" data-key="72">
+                        <kbd class="key__alphabet">H</kbd>
+                        <span class="key__name">Ride</span>
+                    </div>
+                    <div class="key" data-key="74">
+                        <kbd class="key__alphabet">J</kbd>
+                        <span class="key__name">Snare</span>
+                    </div>
+                    <div class="key" data-key="75">
+                        <kbd class="key__alphabet">K</kbd>
+                        <span class="key__name">Tom</span>
+                    </div>
+                    <div class="key" data-key="76">
+                        <kbd class="key__alphabet">L</kbd>
+                        <span class="key__name">Tink</span>
+                    </div>
+                </div>
+
+                <p class="instruction">
+                    Press a key or click on a box to play a sound!
+                </p>
+
+                <audio
+                    class="key-audio"
+                    data-key="65"
+                    src="./assets/sounds/clap.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="83"
+                    src="./assets/sounds/hihat.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="68"
+                    src="./assets/sounds/kick.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="70"
+                    src="./assets/sounds/openhat.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="71"
+                    src="./assets/sounds/boom.mp3"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="72"
+                    src="./assets/sounds/ride.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="74"
+                    src="./assets/sounds/snare.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="75"
+                    src="./assets/sounds/tom.wav"
+                ></audio>
+                <audio
+                    class="key-audio"
+                    data-key="76"
+                    src="./assets/sounds/tink.wav"
+                ></audio>
+            </div>
+        </div>
+    </body>
+</html>

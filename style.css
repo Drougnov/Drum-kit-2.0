@@ -1,0 +1,159 @@
+/* ---===default===--- */
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "DynaPuff", serif;
+}
+
+.wrapper {
+    background-image: url("./assets/bg-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, #1a1514);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.key-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
+
+.key {
+    min-width: 6rem;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    cursor: pointer;
+}
+
+.key__alphabet {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "DynaPuff", serif;
+    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    pointer-events: none;
+}
+
+.key__name {
+    color: white;
+    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    pointer-events: none;
+}
+
+/* ---===key active status===--- */
+
+.key.playing {
+    border: 2px solid #f7d020;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.key.playing .key__alphabet,
+.key.playing .key__name {
+    color: #f7d020;
+}
+
+.instruction {
+    color: white;
+    position: absolute;
+    bottom: 2.5rem;
+    text-align: center;
+}
+
+/* ---===media-query===--- */
+
+@media (max-width: 1200px) {
+    .key-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .key:nth-child(9) {
+        grid-column: span 4;
+        justify-self: center;
+    }
+
+    .key__alphabet {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.75rem;
+    }
+
+    .key-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .key {
+        width: 4rem;
+        min-width: 4rem;
+        min-height: 4rem;
+    }
+
+    .key:nth-child(9) {
+        grid-column: unset;
+        justify-self: unset;
+    }
+
+    .key__alphabet {
+        font-size: 1.25rem;
+    }
+}
